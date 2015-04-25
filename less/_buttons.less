@@ -1,0 +1,82 @@
+.button--base {
+  &:extend(.brdr--rounded);
+  padding: @padding/2 @padding;
+  border: 2px solid #ccc;
+  color: @font-color;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button {
+  &:extend(.button--base);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba(0,0,0,0.05);
+    color: darken(@font-color, 20%);
+  }
+}
+
+.button--link {
+  &:extend(.button--base);
+
+  border-color: transparent;
+  color: @link-color;
+
+  &:hover {
+	background-color: transparent;
+	color: darken(@link-color, 15%);
+  }
+}
+
+.button--blue {
+  &:extend(.button--base);
+
+  border-color: darken(@blue, 3%);
+  background-color: @blue;
+  color: @white;
+
+  &:hover,
+  &:focus,
+  &:active {
+	color: @white;
+	background-color: darken(@blue, 10%);
+  }
+}
+
+.button--green {
+  &:extend(.button--base);
+
+  border-color: darken(@green, 4%);
+  background-color: @green;
+  color: @white;
+
+  &:hover,
+  &:focus,
+  &:active {
+	color: @white;
+	background-color: darken(@green, 10%);
+  }
+}
+
+.button--gray {
+  &:extend(.button--base);
+
+  border-color: darken(@dark-gray, 5%);
+  background-color: @dark-gray;
+  color: @white;
+
+  &:hover,
+  &:focus,
+  &:active {
+	color: @white;
+	background-color: darken(@dark-gray, 10%);
+  }
+}
+
+.button--s {
+  &:extend(.small);
+  padding: @padding/2;
+}
+
